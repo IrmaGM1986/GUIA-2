@@ -1,0 +1,82 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú con Submenú</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Estilos del menú */
+    nav {
+      background: #333;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none;
+    }
+    nav ul li a:hover {
+      background: #444;
+    }
+
+    /* Submenú oculto */
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #444;
+      padding: 0;
+      min-width: 180px;
+    }
+    nav ul li ul li a {
+      padding: 10px 15px;
+    }
+    nav ul li ul li a:hover {
+      background: #555;
+    }
+
+    /* Mostrar el submenú al pasar el ratón */
+    nav ul li:hover > ul {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">MENU DOS GUIA CIUDADANA</a></li>
+      <li>
+        <a href="#">Servicios ▾</a>
+        <ul>
+          <li><a href="#">Diseño Web</a></li>
+          <li><a href="#">Programación</a></li>
+          <li><a href="#">Marketing</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Productos ▾</a>
+        <ul>
+          <li><a href="#">Software</a></li>
+          <li><a href="#">Apps</a></li>
+          <li><a href="#">Hosting</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
